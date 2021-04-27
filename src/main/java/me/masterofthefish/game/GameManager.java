@@ -160,19 +160,4 @@ public class GameManager {
         queuedUsers.get(game).remove(user);
         game.removeUser(user);
     }
-
-//    public void checkQueue() {
-//        if(queuedUsers.isEmpty()) {
-//            return;
-//        }
-//        for(final Game game : games) {
-//            while(!game.isActive() && !game.isFull() && !queuedUsers.isEmpty()) {
-//                final ManhuntUser user = queuedUsers.poll();
-//                if(user == null) {
-//                    continue;
-//                }
-//                game.addPlayer(user);
-//            }
-//        }
-//    }
 }
