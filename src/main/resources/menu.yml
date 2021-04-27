@@ -1,0 +1,5 @@
+title: Game Menu
+fill-border: true
+border-type: BLACK_STAINED_GLASS_PANE
+game-waiting-material: EMERALD_BLOCK
+game-active-material: REDSTONE_BLOCK

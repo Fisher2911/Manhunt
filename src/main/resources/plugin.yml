@@ -1,0 +1,11 @@
+name: Manhunt
+main: me.masterofthefish.Manhunt
+version: 1.0
+author: MasterOfTheFish
+api-version: 1.16
+depend:
+  - Multiverse-Core
+commands:
+  manhunt:
+    description: Base command
+    usage: Base command

@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+group 'me.masterofthefish'
+version '1.0-SNAPSHOT'
+
+dependencies {
+//    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+//    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
+    implementation "me.mattstudios.utils:matt-framework-gui:2.0.2"
+    compileOnly 'com.onarandombox.multiversecore:Multiverse-Core:4.2.2'
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+
+shadowJar {
+    relocate 'me.mattstudios.mfgui', 'me.masterofthefish.Manhunt'
+}
+
+repositories {
+    maven {
+        url "https://hub.spigotmc.org/nexus/content/repositories/snapshots"
+    }
+    mavenCentral()
+    maven { url = "http://repo.onarandombox.com/content/groups/public/" }
+}
+
+//test {
+//    useJUnitPlatform()
+//}

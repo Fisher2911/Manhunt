@@ -1,0 +1,26 @@
+already-in-game: "&aAlready In Game"
+game-waiting: "&aGame Waiting"
+game-started: "&aGame Started"
+total-players-waiting: "&aTotal Players Waiting: %waiting%"
+already-in-queue: "&aPlayer Already in Queue"
+send-role: "&aYour role is %role%"
+tracker-name: "&aTracker Name"
+titles:
+  winner:
+    title: "Winner"
+    sub-title: ""
+    fade-in: 60
+    stay: 60
+    fade-out: 60
+  loser:
+    title: "Loser"
+    sub-title: ""
+    fade-in: 60
+    stay: 60
+    fade-out: 60
+  countdown:
+    title: "Starting in %time%"
+    sub-title: ""
+    fade-in: 60
+    stay: 60
+    fade-out: 60
