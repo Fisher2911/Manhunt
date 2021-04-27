@@ -15,6 +15,7 @@ import me.masterofthefish.saving.SQLiteDatabase;
 import me.masterofthefish.user.UserManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitTask;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public class Manhunt extends JavaPlugin {
     private GameManager gameManager;
     private GuiConfig guiConfig;
     private MultiverseCore multiverseCore;
+    private BukkitTask saveTask;
 
     @Override
     public void onEnable() {
@@ -45,8 +47,8 @@ public class Manhunt extends JavaPlugin {
     // Order Matters
     private void init() {
         this.userManager = new UserManager(this);
-        database = new SQLiteDatabase(this);
         this.settings = new Settings(this);
+        database = new SQLiteDatabase(this);
         this.guiConfig = new GuiConfig(this);
         this.gameManager = new GameManager(this);
         this.multiverseCore = (MultiverseCore) Bukkit.getServer().getPluginManager().getPlugin("Multiverse-Core");
@@ -54,6 +56,9 @@ public class Manhunt extends JavaPlugin {
         registerCommands();
         registerListeners();
         database.loadOnlinePlayers();
+        this.saveTask = Bukkit.getScheduler().runTaskTimerAsynchronously(this, () -> {
+            database.saveAll();
+        }, 6_000, 6_000);
     }
 
     private void registerCommands() {

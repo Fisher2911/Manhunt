@@ -34,7 +34,6 @@ public class SQLiteDatabase implements Database {
         }
         try {
             this.conn = DriverManager.getConnection("jdbc:sqlite:" + new File(plugin.getDataFolder(), "users.db"));
-//            Class.forName("org.sql.JDBC");
             return conn;
         } catch(SQLException e) {
             plugin.getLogger().warning("Error accessing sqlite connection: " + e.getMessage());
@@ -71,10 +70,10 @@ public class SQLiteDatabase implements Database {
                             COLUMN_UUID + ", " +
                             COLUMN_WINS + ", " +
                             COLUMN_LOSSES + ") " +
-                            "VALUES (" +
-                            uuid + ", " +
-                            wins + ", " +
-                            losses + ") " +
+                            "VALUES ('" +
+                            uuid + "', '" +
+                            wins + "', '" +
+                            losses + "') " +
                             "ON CONFLICT (" +
                             COLUMN_UUID + ") DO UPDATE SET " +
                             COLUMN_WINS + "='" + wins + "', " +

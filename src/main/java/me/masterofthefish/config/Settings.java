@@ -52,9 +52,8 @@ public class Settings {
         final int z = config.getInt(location + "." + "z");
         worlds.addAll(config.getStringList("worlds"));
         if(worldName == null) {
-            for(int i = 0; i < 100; i++) {
-                System.out.println("World name is null");
-            }
+            plugin.getLogger().severe("World name is null for spawn location: Shutting Down");
+            Bukkit.getPluginManager().disablePlugin(plugin);
             return;
         }
         this.spawnLocation = new Location(Bukkit.getWorld(worldName), x, y, z);
@@ -83,9 +82,7 @@ public class Settings {
     public int getLogoutTimeLimit() { return this.logoutTimeLimit; }
 
     public int getCountdownTime() {
-        // todo
-        return 15;
-        //return this.countdownTime;
+        return this.countdownTime;
     }
 
     public Location getSpawnLocation() {

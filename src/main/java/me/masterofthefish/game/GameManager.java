@@ -79,18 +79,24 @@ public class GameManager {
                     return;
                 }
                 if (user.isInGame()) {
-                    clicker.sendMessage(Lang.alreadyInQueue());
-                    clicker.sendMessage(game.toString());
+                    user.setCurrentGame(null);
+                    removeFromQueue(user, game);
+//                    clicker.sendMessage(Lang.alreadyInQueue());
+                    updateMenu(gui, guiItem, game, manhuntUser);
                     return;
                 }
                 addToQueue(user, game);
-                guiItem.setItemStack(getDisplayItem(game, user));
-                gui.update();
+                updateMenu(gui, guiItem, game, manhuntUser);
             });
             gui.addItem(guiItem);
             itemGameMap.put(guiItem, game);
         }
         return gui;
+    }
+
+    private void updateMenu(final BaseGui gui, final GuiItem guiItem, final Game game, final ManhuntUser user) {
+        guiItem.setItemStack(getDisplayItem(game, user));
+        gui.update();
     }
 
     private ItemStack getDisplayItem(final Game game, final ManhuntUser user) {
@@ -102,7 +108,9 @@ public class GameManager {
                 setName(isActive ? Lang.gameStarted() : Lang.gameWaiting()).
                 setLore("", isActive ? ChatColor.RED + "In Game" :
                         Lang.totalPlayersWaiting(game.getPlayersWaiting()),
-                        queuedUsers.get(game).contains(user) ? ChatColor.GREEN +
+                        "",
+                        game.equals(user.getCurrentGame()) ? ChatColor.AQUA + "Waiting" :
+                        queuedUsers.get(game).contains(user) ? ChatColor.AQUA +
                         "In Queue" : "").build();
     }
 
@@ -146,6 +154,11 @@ public class GameManager {
             }
             game.addPlayer(user);
             return true;
+    }
+
+    public void removeFromQueue(final ManhuntUser user, final Game game) {
+        queuedUsers.get(game).remove(user);
+        game.removeUser(user);
     }
 
 //    public void checkQueue() {

@@ -184,7 +184,7 @@ public class Game {
         if(this.users.size() <= 4) {
             this.users.add(user);
             user.setCurrentGame(this);
-            if(this.users.size() == 2) {
+            if(this.users.size() == 5) {
                 start();
             }
             return;
@@ -211,6 +211,8 @@ public class Game {
     public void removeUser(final ManhuntUser user) {
         if(!isActive()) {
             this.users.remove(user);
+        } else {
+            throw new IllegalStateException("Cannot remove a player while they are in a game!");
         }
     }
 

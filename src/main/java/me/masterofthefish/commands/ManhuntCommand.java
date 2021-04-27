@@ -1,6 +1,7 @@
 package me.masterofthefish.commands;
 
 import me.masterofthefish.Manhunt;
+import me.masterofthefish.config.Lang;
 import me.masterofthefish.game.GameManager;
 import me.masterofthefish.user.ManhuntUser;
 import me.masterofthefish.user.UserManager;
@@ -34,6 +35,9 @@ public class ManhuntCommand implements CommandExecutor {
         final ManhuntUser user = userManager.getUser(uuid);
         if(user == null) {
             return true;
+        }
+        if(user.getCurrentGame() != null) {
+            player.sendMessage(Lang.alreadyInGame());
         }
         gameManager.getGui(user).open(player);
         return true;

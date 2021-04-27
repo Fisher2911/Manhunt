@@ -3,6 +3,7 @@ package me.masterofthefish.user;
 import me.masterofthefish.game.Game;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 import java.util.UUID;
@@ -83,17 +84,21 @@ public class ManhuntUser implements Comparable<ManhuntUser> {
     }
 
     @Override
-    public int compareTo(ManhuntUser user) {
+    public int compareTo(final @NotNull ManhuntUser user) {
         if(!this.isOnline()) {
             return -1;
         }
         if(!user.isOnline()) {
             return 1;
         }
-        // todo - Sort based on permissions
         final Player firstPlayer = this.getPlayer();
         final Player secondPlayer = user.getPlayer();
-
+        final String permission = "manhunt.priority";
+        if(firstPlayer.hasPermission(permission) && !secondPlayer.hasPermission(permission)) {
+            return -1;
+        } else if(secondPlayer.hasPermission(permission) && !firstPlayer.hasPermission(permission)) {
+            return 1;
+        }
         return 0;
     }
 }
