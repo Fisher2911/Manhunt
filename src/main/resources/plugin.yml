@@ -1,5 +1,5 @@
 name: Manhunt
-main: me.masterofthefish.Manhunt
+main: me.masterofthefish.manhunt.Manhunt
 version: 1.0
 author: MasterOfTheFish
 api-version: 1.16
