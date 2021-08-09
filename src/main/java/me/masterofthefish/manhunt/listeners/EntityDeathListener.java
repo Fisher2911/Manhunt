@@ -1,12 +1,11 @@
-package me.masterofthefish.listeners;
+package me.masterofthefish.manhunt.listeners;
 
-import me.masterofthefish.Manhunt;
-import me.masterofthefish.game.Game;
-import me.masterofthefish.game.GameManager;
-import me.masterofthefish.user.ManhuntUser;
-import me.masterofthefish.user.Role;
-import me.masterofthefish.user.UserManager;
-import org.bukkit.Bukkit;
+import me.masterofthefish.manhunt.Manhunt;
+import me.masterofthefish.manhunt.game.Game;
+import me.masterofthefish.manhunt.game.GameManager;
+import me.masterofthefish.manhunt.user.Role;
+import me.masterofthefish.manhunt.user.UserManager;
+import me.masterofthefish.manhunt.user.ManhuntUser;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;

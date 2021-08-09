@@ -1,6 +1,6 @@
-package me.masterofthefish.saving;
+package me.masterofthefish.manhunt.saving;
 
-import me.masterofthefish.user.ManhuntUser;
+import me.masterofthefish.manhunt.user.ManhuntUser;
 import org.bukkit.entity.Player;
 
 import java.util.List;

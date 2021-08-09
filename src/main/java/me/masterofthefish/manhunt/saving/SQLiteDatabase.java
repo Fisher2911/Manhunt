@@ -1,8 +1,8 @@
-package me.masterofthefish.saving;
+package me.masterofthefish.manhunt.saving;
 
-import me.masterofthefish.Manhunt;
-import me.masterofthefish.user.ManhuntUser;
-import me.masterofthefish.user.UserManager;
+import me.masterofthefish.manhunt.Manhunt;
+import me.masterofthefish.manhunt.user.ManhuntUser;
+import me.masterofthefish.manhunt.user.UserManager;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 

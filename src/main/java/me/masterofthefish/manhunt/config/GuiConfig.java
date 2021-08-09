@@ -1,6 +1,6 @@
-package me.masterofthefish.config;
+package me.masterofthefish.manhunt.config;
 
-import me.masterofthefish.Manhunt;
+import me.masterofthefish.manhunt.Manhunt;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;

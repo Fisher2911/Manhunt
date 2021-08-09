@@ -1,4 +1,4 @@
-package me.masterofthefish.user;
+package me.masterofthefish.manhunt.user;
 
 public enum Role {
 

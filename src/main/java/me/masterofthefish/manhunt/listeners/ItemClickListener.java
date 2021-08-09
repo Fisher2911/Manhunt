@@ -1,9 +1,9 @@
-package me.masterofthefish.listeners;
+package me.masterofthefish.manhunt.listeners;
 
-import me.masterofthefish.Manhunt;
-import me.masterofthefish.game.Game;
-import me.masterofthefish.user.ManhuntUser;
-import me.masterofthefish.user.UserManager;
+import me.masterofthefish.manhunt.Manhunt;
+import me.masterofthefish.manhunt.game.Game;
+import me.masterofthefish.manhunt.user.UserManager;
+import me.masterofthefish.manhunt.user.ManhuntUser;
 import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

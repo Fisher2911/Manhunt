@@ -1,6 +1,6 @@
-package me.masterofthefish.user;
+package me.masterofthefish.manhunt.user;
 
-import me.masterofthefish.Manhunt;
+import me.masterofthefish.manhunt.Manhunt;
 
 import java.util.HashMap;
 import java.util.Map;

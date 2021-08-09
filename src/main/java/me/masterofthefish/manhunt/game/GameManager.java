@@ -1,11 +1,11 @@
-package me.masterofthefish.game;
+package me.masterofthefish.manhunt.game;
 
-import me.masterofthefish.Manhunt;
-import me.masterofthefish.config.GuiConfig;
-import me.masterofthefish.config.Lang;
-import me.masterofthefish.config.Settings;
-import me.masterofthefish.user.ManhuntUser;
-import me.masterofthefish.user.UserManager;
+import me.masterofthefish.manhunt.Manhunt;
+import me.masterofthefish.manhunt.config.GuiConfig;
+import me.masterofthefish.manhunt.config.Lang;
+import me.masterofthefish.manhunt.config.Settings;
+import me.masterofthefish.manhunt.user.UserManager;
+import me.masterofthefish.manhunt.user.ManhuntUser;
 import me.mattstudios.mfgui.gui.components.ItemBuilder;
 import me.mattstudios.mfgui.gui.guis.BaseGui;
 import me.mattstudios.mfgui.gui.guis.Gui;

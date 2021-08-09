@@ -1,12 +1,12 @@
-package me.masterofthefish.game;
+package me.masterofthefish.manhunt.game;
 
 import com.onarandombox.MultiverseCore.MultiverseCore;
 import com.onarandombox.MultiverseCore.api.MVWorldManager;
-import me.masterofthefish.Manhunt;
-import me.masterofthefish.config.Lang;
-import me.masterofthefish.config.Settings;
-import me.masterofthefish.user.ManhuntUser;
-import me.masterofthefish.user.Role;
+import me.masterofthefish.manhunt.Manhunt;
+import me.masterofthefish.manhunt.config.Lang;
+import me.masterofthefish.manhunt.config.Settings;
+import me.masterofthefish.manhunt.user.Role;
+import me.masterofthefish.manhunt.user.ManhuntUser;
 import me.mattstudios.mfgui.gui.components.ItemBuilder;
 import org.bukkit.*;
 import org.bukkit.entity.Player;

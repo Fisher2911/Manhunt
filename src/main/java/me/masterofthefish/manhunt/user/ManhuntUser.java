@@ -1,6 +1,6 @@
-package me.masterofthefish.user;
+package me.masterofthefish.manhunt.user;
 
-import me.masterofthefish.game.Game;
+import me.masterofthefish.manhunt.game.Game;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;

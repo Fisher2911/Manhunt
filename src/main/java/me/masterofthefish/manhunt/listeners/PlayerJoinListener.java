@@ -1,7 +1,7 @@
-package me.masterofthefish.listeners;
+package me.masterofthefish.manhunt.listeners;
 
-import me.masterofthefish.Manhunt;
-import me.masterofthefish.saving.Database;
+import me.masterofthefish.manhunt.Manhunt;
+import me.masterofthefish.manhunt.saving.Database;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

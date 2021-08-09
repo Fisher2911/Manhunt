@@ -1,10 +1,10 @@
-package me.masterofthefish.commands;
+package me.masterofthefish.manhunt.commands;
 
-import me.masterofthefish.Manhunt;
-import me.masterofthefish.config.Lang;
-import me.masterofthefish.game.GameManager;
-import me.masterofthefish.user.ManhuntUser;
-import me.masterofthefish.user.UserManager;
+import me.masterofthefish.manhunt.Manhunt;
+import me.masterofthefish.manhunt.config.Lang;
+import me.masterofthefish.manhunt.game.GameManager;
+import me.masterofthefish.manhunt.user.UserManager;
+import me.masterofthefish.manhunt.user.ManhuntUser;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
